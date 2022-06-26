@@ -2,7 +2,11 @@
 <tr></tr>
 <table class="table">
   <tbody>
-    <tr><%= image_tag 'no_image.jpg' %></tr>
+    <tr>
+      <%= link_to user_path(user.id) do %>
+      <%= image_tag user.get_image, size: "100x100" %>
+      <% end %>
+    </tr>
     <tr>
       <th>name</th>
       <th><%= user.name %></th>
